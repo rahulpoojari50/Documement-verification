@@ -1,0 +1,35 @@
+        # Import and use the enhanced PAN verifier
+        try:
+            import sys
+            sys.path.append('/Users/rahulpoojari/Documents/mlmodel')
+            from pan_verification.pan_verifier import PanCardVerifier
+            
+            # Perform enhanced verification
+            verifier = PanCardVerifier()
+            verification_result = verifier.verify_pan_card(tmp_file_path)
+            
+            # Generate response
+            response = EnhancedPanAuthenticityResponse(
+                is_authentic=verification_result.is_authentic,
+                confidence=verification_result.confidence,
+                layout_verified=verification_result.layout_verified,
+                text_validated=verification_result.text_validated,
+                security_features_verified=verification_result.security_features_verified,
+                issuer_verified=verification_result.issuer_verified,
+                tampering_detected=verification_result.tampering_detected,
+                pan_number=verification_result.pan_number,
+                holder_name=verification_result.holder_name,
+                fathers_name=verification_result.fathers_name,
+                date_of_birth=verification_result.date_of_birth,
+                issues_found=verification_result.issues_found,
+                detected_entities=detected_entities,
+                total_detections=len(detected_entities)
+            )
+            
+            return response
+            
+        except Exception as e:
+            # Fallback to original verification if enhanced verification fails
+            print(f"Enhanced verification failed: {str(e)}")
+            import traceback
+            traceback.print_exc()

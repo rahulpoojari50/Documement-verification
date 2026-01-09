@@ -1,0 +1,10 @@
+names:
+- dl_number
+- name
+- address
+- dob
+- photo
+nc: 5
+test: ../test/images
+train: ../train/images
+val: ../valid/images

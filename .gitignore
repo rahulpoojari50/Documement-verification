@@ -1,0 +1,5 @@
+.env
+.env.*
+*.save
+__pycache__/
+node_modules/

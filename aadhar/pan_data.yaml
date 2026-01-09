@@ -1,0 +1,11 @@
+names:
+- pan_number
+- name
+- fathers_name
+- dob
+- photo
+- signature
+nc: 6
+train: ../train/images
+val: ../valid/images
+test: ../test/images

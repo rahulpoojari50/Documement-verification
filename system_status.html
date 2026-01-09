@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aadhaar Detection System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .links {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+        .link-box {
+            padding: 20px;
+            border: 2px solid #3b82f6;
+            border-radius: 8px;
+            background-color: #eff6ff;
+            width: 45%;
+        }
+        .link-box h3 {
+            margin-top: 0;
+            color: #3b82f6;
+        }
+        .link-box a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .link-box a:hover {
+            background-color: #2563eb;
+        }
+        .status {
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .success {
+            background-color: #dcfce7;
+            border: 1px solid #22c55e;
+            color: #166534;
+        }
+        .info {
+            background-color: #dbeafe;
+            border: 1px solid #3b82f6;
+            color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Aadhaar Card Entity Detection System</h1>
+        <p>System is now running with both backend API and frontend interface</p>
+        
+        <div class="status success">
+            <h3>✓ System Status: Running</h3>
+            <p>Both backend API and frontend interface are active</p>
+        </div>
+        
+        <div class="links">
+            <div class="link-box">
+                <h3>Frontend Interface</h3>
+                <p>Interactive web interface for Aadhaar card entity detection</p>
+                <a href="http://localhost:3000" target="_blank">Open Frontend</a>
+            </div>
+            
+            <div class="link-box">
+                <h3>API Documentation</h3>
+                <p>Backend API endpoints and documentation</p>
+                <a href="http://localhost:8000/docs" target="_blank">API Docs</a>
+            </div>
+        </div>
+        
+        <div class="status info">
+            <h3>How to Use:</h3>
+            <ol style="text-align: left; margin-top: 20px;">
+                <li>Click "Open Frontend" to access the web interface</li>
+                <li>Upload an Aadhaar card image using drag & drop or file selection</li>
+                <li>Click "Detect Aadhaar Entities" to process the image</li>
+                <li>View detected entities with bounding boxes and confidence scores</li>
+            </ol>
+        </div>
+        
+        <div class="status info">
+            <h3>API Endpoints:</h3>
+            <p><strong>POST /detect</strong> - Detect entities on Aadhaar card images</p>
+            <p><strong>GET /health</strong> - Check system health status</p>
+        </div>
+    </div>
+</body>
+</html>
